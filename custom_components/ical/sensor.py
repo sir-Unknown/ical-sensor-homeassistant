@@ -141,7 +141,7 @@ class ICalSensor(Entity):
                 start - datetime.now(start.tzinfo) + timedelta(days=1)
             ).days
             self._event_attributes["all_day"] = val.get("all_day")
-            self._state = f"{name} - {start.strftime('%-d %B %Y')}"
+            self._state = f"{start.strftime('%-d %B %Y')}"
             if not val.get("all_day"):
                 self._state += f" {start.strftime('%H:%M')}"
             # self._is_available = True
